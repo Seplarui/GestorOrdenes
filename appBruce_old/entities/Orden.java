@@ -8,14 +8,31 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ordenes")
+@Table(name="ORDENES")
 public class Orden {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
-    Long id;
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="ID")
+    Long id;
+    
+    public String getOrden() {
+        return orden;
+    }
+
+    public void setOrden(String orden) {
+        this.orden = orden;
+    }
+
+    @Column(name="kk")
+    String orden;
+
+    @Column(name="APRENDIDA")
+    String aprendida;
+
+    @Column(name="Fecha")
+    String fecha;
+    
     public Long getId() {
         return id;
     }
@@ -24,13 +41,6 @@ public class Orden {
         this.id = id;
     }
 
-    public String getOrden() {
-        return orden;
-    }
-
-    public void setOrden(String orden) {
-        this.orden = orden;
-    }
 
     public String getAprendida() {
         return aprendida;
@@ -47,13 +57,4 @@ public class Orden {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-
-    @Column(name="orden")
-    String orden;
-
-    @Column(name="aprendida")
-    String aprendida;
-
-    @Column(name="fecha")
-    String fecha;
 }
