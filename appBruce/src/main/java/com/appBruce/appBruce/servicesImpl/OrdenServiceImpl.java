@@ -8,7 +8,9 @@ import com.appBruce.appBruce.repository.OrdenRepository;
 import com.appBruce.appBruce.service.OrdenService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class OrdenServiceImpl implements OrdenService{
     @Autowired
     OrdenRepository ordenRepository;
@@ -43,7 +45,7 @@ public class OrdenServiceImpl implements OrdenService{
     }
 
     public String updateOrden(Orden ordenUpdated) {
-        Long num = ordenUpdate.getId();
+        Long num = ordenUpdated.getId();
 
         if(ordenRepository.findById(num).isPresent()) {
             Orden ordenToUpdate = new Orden();
