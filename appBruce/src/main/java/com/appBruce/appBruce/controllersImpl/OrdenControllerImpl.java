@@ -40,7 +40,6 @@ public class OrdenControllerImpl implements OrdenController{
     @RequestMapping(value="/ordenes/add", method=RequestMethod.POST)
     public Orden addOrden(Orden orden) {
         return ordenService.saveOrden(orden);
-    
     }
     
     @Override

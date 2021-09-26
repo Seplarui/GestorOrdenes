@@ -56,7 +56,4 @@ public class Orden {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-
-
-
 }
